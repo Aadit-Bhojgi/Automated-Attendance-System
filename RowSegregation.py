@@ -26,7 +26,7 @@ class RowSegregate:
                 break
             else:
                 x, y, w, h = cv2.boundingRect(c)
-                if x + w == img.shape[1]:
+                if x + w == img.shape[1] and x == 0:
                     if self.i == self.RowCount:
                         self.directory = self.path + '\\AttendanceSheet\\.Year'
                         self.row = '{}.png'.format(self.directory)
