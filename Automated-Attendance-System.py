@@ -95,7 +95,7 @@ class MainThread(QThread):
 
     def segregate_rows(self, names, students_strength):
         RowSegregation.RowSegregate(self.RowsMarked, names, students_strength, self.path).crop()
-        # os.remove(self.RowsMarked)
+        os.remove(self.RowsMarked)
 
     def digit_recognition(self, students_strength):
         self.result = DigitRecognition.DigitRecognition(self.path, students_strength).get_digits_path_and_predict()
