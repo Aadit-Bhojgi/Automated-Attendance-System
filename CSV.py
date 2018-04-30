@@ -37,7 +37,7 @@ class CSV:
 
     def write(self, filename):
         with open(filename, 'w', newline='') as csv_file:
-            writer = csv.DictWriter(csv_file, fieldnames=self.CSV_Fields, quoting=csv.QUOTE_ALL)
+            writer = csv.DictWriter(csv_file, fieldnames=self.CSV_Fields)
             writer.writeheader()
             writer.writerows(self.attendance)
 
