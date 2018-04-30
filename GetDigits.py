@@ -37,7 +37,7 @@ class GetDigits:
             if len(approx) == 4:
                 (x, y, w, h) = cv2.boundingRect(approx)
                 ar = w / float(h)
-                if (ar >= 0.7) and (ar <= 0.99999999999998999):
+                if (ar >= 0.7) and (ar <= 0.99999999999999999):
                     if h < self.THIN_THRESHOLD or w < self.THIN_THRESHOLD:
                         continue
                     if h > 300 and w > 300:

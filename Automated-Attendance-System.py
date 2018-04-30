@@ -19,7 +19,7 @@ class Attendance(QtWidgets.QMainWindow, GUI.Ui_Attendance):
         self.csv.hide()
         self.message.hide()
         self.path = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))  # script directory
-        self.CSV = CSV.CSV(self.path)
+        self.CSV = CSV.CSV()
         self.image = self.RowsMarked = ''
         self.MainThread = MainThread()
         self.upload.clicked.connect(self.get_image)
