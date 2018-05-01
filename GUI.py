@@ -86,7 +86,7 @@ class Ui_Attendance(object):
         Attendance.setWindowTitle(_translate("Attendance", "Automated Attendance System"))
         self.label.setText(_translate("Attendance", "<html><head/><body><p><img src=\":/Logo/bg.png\"/></p></body></html>"))
         self.upload.setText(_translate("Attendance", "Upload"))
-        self.message.setText(_translate("Attendance", "<html><head/><body><p><span style=\" font-size:10pt; color:#333333;\">Getting Your CSV FIle Ready....</span></p></body></html>"))
+        self.message.setText(_translate("Attendance", "<html><head/><body><p><span style=\" font-size:10pt; color:#333333;\">Getting Your CSV File Ready....</span></p></body></html>"))
         self.csv.setText(_translate("Attendance", "File"))
 
 import Resource
