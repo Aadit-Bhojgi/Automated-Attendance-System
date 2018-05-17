@@ -20,7 +20,7 @@ class RowMarking:
                 ar = w / float(h)
                 # To get only rectangles of desired AREA
                 if ar >= 2:
-                    if w < 130 and h < 70:
+                    if w < 130 and h < 70 and x < 60:
                         cv.line(img, (0, y), (img.shape[0], y), (0, 0, 255), 2)
         image = self.path + '\RowsMarked.jpg'
         cv.imwrite(image, img)
