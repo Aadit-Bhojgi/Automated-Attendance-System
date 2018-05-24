@@ -41,15 +41,15 @@ class Recognizer:
         init = tf.initialize_all_variables()
         self.sess = tf.Session()
         self.sess.run(init)
-        # use 1000 batches with a size of 100 each to train our net
-        for i in range(10000):
+        # use 1000 batches with a size of 100 each to train our network
+        for i in range(1000):
             batch_xs, batch_ys = mnist.train.next_batch(100)
             # run the train_step function with the given image values (x) and the real output (y_)
             self.sess.run(train_step, feed_dict={self.x: batch_xs, self.y_: batch_ys})
         correct_prediction = tf.equal(tf.argmax(self.y, 1), tf.argmax(self.y_, 1))
         self.accuracy = tf.reduce_mean(tf.cast(correct_prediction, "float"))
-        # print('Probability: ' + str(self.sess.run(self.accuracy, feed_dict={self.x: mnist.test.images,
-                                                                        # self.y_: mnist.test.labels})))
+        # print('Probability: ' + str(self.sess.run(self.accuracy,
+        #                                           feed_dict={self.x: mnist.test.images, self.y_: mnist.test.labels})))
 
     def TestRecognizer(self, directory, images_list):
         # create an array where we can store our 4 pictures
